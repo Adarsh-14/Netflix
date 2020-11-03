@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body{
+            font-family: Varela Round;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="color: red;">Netflix</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-tasks"></span> About Us</a></li>
+                    <li><a href="contactus.html"><span class="glyphicon glyphicon-phone"></span> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row row-style">
+            <div class="col-md-4">
+                <h3 style="color: red;">WHO WE ARE</h3><br>
+                <div>
+                    <img src="img/men-emp.jpg" alt="working employees make a successful company with their talent and hard work">
+                </div>
+                <br>
+                <div>
+
+                    <p>
+                   Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+
+You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+</p>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 style="color: red;">OUR HISTORY</h3><br>
+                <div>
+                    <h5 style="color: greenyellow;">1997</h5>
+                    <p>
+                       Netflix, Inc. (/ˈnɛtflɪks/) is an American media-services provider and production company headquartered in Los Gatos, California, founded in 1997 by Reed Hastings and Marc Randolph in Scotts Valley, California. The company's primary business is its subscription-based streaming service which offers online streaming of a library of films and television programs, including those produced in-house.[9] As of April 2019, Netflix had over 148 million paid subscriptions worldwide, including 60 million in the United States, and over 154 million subscriptions total including free trials.[8] It is available worldwide except in mainland China (due to local restrictions), Syria, North Korea, Iran, and Crimea (due to US sanctions). The company also has offices in the Netherlands, Brazil, India, Japan, and South Korea.[10] Netflix is a member of the Motion Picture Association (MPA).
+                    </p>
+                   
+                </div>       
+            </div>
+            <div class="col-md-4">
+                <h3 style="color: red;">OPPORTUNITIES</h3><br>
+                <h5><b style="color: greenyellow;">Available Roles</b></h5>
+                <p>
+                    1. Jr./Sr. Web Developer [Full Time Role + also available as a 6 Months Internship]<br><br>
+                    2. Business Apprentice [6 Months Internship]<br><br>
+                    3. Manager at backend operations [Full Time Role + also available as a 6 Months Internship]
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"><b>LOGIN</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p style="color: #272883;">Don't have any account? <a href="signup.php">Register</a></p>
+                  <form method="POST" action="login_submit.php">
+                    <div class="form-group">
+                       <input type="email" class="form-control" placeholder="Email" name="email">
+                    </div>
+                    <div class="form-group">
+                       <input type="password" class="form-control" placeholder="Password" name="pass">
+                    </div>
+                    <div class="form-group">
+                       <input type="submit" class="btn btn-primary" value="Login">
+                    </div>
+                  </form>
+                  <a href="">Forget Password</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>

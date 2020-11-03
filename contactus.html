@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: Varela Round;
+        }
+        .row-style{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" style="color: red;">Netflix</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-tasks"></span> About Us</a></li>
+                    <li><a href="contactus.html"><span class="glyphicon glyphicon-phone"></span> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row row-style">
+            <div class="col-sm-10">
+                <h2 style="color: red;">LIVE SUPPORT</h2>
+                <h4 style="color: greenyellow;">24 hours | 7 days a week | 365 days a year Live Technical Support</h4>
+                <p>Try us free for 30 days! If you enjoy your Netflix trial, do nothing and your membership will automatically continue for as long as you choose to remain a member. Cancel at any time before your trial ends and you will not be charged. There’s no complicated contract, no cancellation fees, and no commitment. Cancel online at any time, 24 hours a day.
+                </p>
+            </div>
+            <div class="col-sm-2">
+                <img src="img/liveS.png" alt="Live Support">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 style="color: red;">CONTACT US</h2>
+                <form name="myform2">
+                    <div class="form-group">
+                        <label style="color: greenyellow;">Name:</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: greenyellow;">Email:</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label style="color: greenyellow;">Message:</label>
+                        <input type="text" name="message" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Submit" onclick="contact()">
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <h2 style="color: red;">Company Information :</h2>
+                <p style="line-height: 27px;">500 Lorem lpsum Dolor Sit,<br>
+                    22-56-2-9 Sit Amet, Lorem,<br>USA<br>
+                    Phone: (00) 222 666 444<br>
+                    Fax: (000) 000 00 00 0<br>
+                    Email: info@contactnetflix.com<br>
+                    Follow on: Facebook, Twitter
+                </p>
+            </div>
+        </div>
+    </div>
+     <!-- Sign in  forms  starts here  -->
+
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"><b>LOGIN</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p style="color: #272883;">Don't have any account? <a href="signup.html">Register</a></p>
+                  <form name="myform2" >
+                    <div class="form-group">
+                       <input type="email" class="form-control" placeholder="Email" name="email">
+                    </div>
+                    <div class="form-group">
+                       <input type="password" class="form-control" placeholder="Password" name="password">
+                    </div>
+                    <div class="form-group">
+                       <input type="password" class="form-control" placeholder="confirm password" name="confirm">
+                    </div>
+                    <div class="form-group">
+                       <input type="submit" class="btn btn-primary" value="Login" onclick="signin()">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+  <script type="text/javascript">
+         
+
+     function signin()
+    {
+       let email=document.myform2.email.value;
+       let password=document.myform2.password.value;
+       let confirm=document.myform2.confirm.value;
+      
+      
+
+
+      if(email=="")
+      {
+        alert("Email field is empty");
+        return false;
+      }
+      else if(password=="")
+      {
+        alert("Password Field should not be left blank");
+        return false;
+      }
+      else if(confirm=="")
+      {
+        alert("confirm password field should not be left blank");
+        return false;
+      }
+      else if(password !== confirm)
+      {
+        alert("Password does not match !!");
+        return false;
+      }
+
+
+
+      
+      
+      alert("You are now Logged in !!");
+    
+
+    }
+
+
+    function contact()
+    {
+       let name=document.myform2.name.value;
+       let email=document.myform2.email.value;
+       let message=document.myform2.message.value;
+      
+      
+
+
+      if(name=="")
+      {
+        alert("name field is empty");
+        return false;
+      }
+      else if(email=="")
+      {
+        alert("email Field should not be left blank");
+        return false;
+      }
+      else if(message=="")
+      {
+        alert("message field should not be left blank");
+        return false;
+      }
+      
+
+
+      
+      
+      alert("Response Submitted Successfully !!");
+      
+
+    }
+          </script>
+</body>
+</html>
